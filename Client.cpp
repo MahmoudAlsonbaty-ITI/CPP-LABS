@@ -1,12 +1,11 @@
-#include "client.h"
+#include "Client.h"
  
 Client::Client(Server& server, int channelID)
 {
     ptr = server.connect(channelID);
 }
  
-int Client::read()
+ChannelData Client::read()
 {
     return ptr->read();
 }
- 

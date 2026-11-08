@@ -10,7 +10,7 @@ public:
  
     Client(Server& server, int channelID);
  
-    int read();
+    ChannelData read();
 };
  
 #endif

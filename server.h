@@ -1,7 +1,7 @@
 #ifndef SERVER_H
 #define SERVER_H
  
-#include "channel.h"
+#include "Channel.h"
  
 enum ChannelID
 {
@@ -14,15 +14,16 @@ enum ChannelID
 class Server
 {
 private:
-    Channel channels[NUM_OF_CHANNELS];
+    SpeedChannel speedChannel;
+    TempChannel tempChannel;
+    RpmChannel rpmChannel;
  
 public:
     Server();
     ~Server();
  
     Channel* connect(int channelID);
-    void write(int channelID, int data);
+    void write(int channelID, ChannelData data);
 };
  
 #endif
- 
