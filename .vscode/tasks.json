@@ -7,7 +7,8 @@
             "description": "Which Lab do you want to compile and run?",
             "options": [
                 "Lab1(Server-Client)",
-                "Lab2"
+                "Lab2",
+                "Lab3(SmartPointers)"
             ],
             "default": "Lab1(Server-Client)"
         }
