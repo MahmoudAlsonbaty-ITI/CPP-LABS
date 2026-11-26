@@ -8,26 +8,28 @@
             "options": [
                 "Lab1(Server-Client)",
                 "Lab2",
-                "Lab3(SmartPointers)"
+                "Lab3(SmartPointers)",
+                "Lab4",
+                "Lab5"
             ],
             "default": "Lab1(Server-Client)"
         }
     ],
     "tasks": [
         {
-            "type": "shell",
-            "label": "C/C++: Build Selected Lab",
-            "command": "/usr/bin/clang++",
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe Build Selected Lab",
+            "command": "C:/msys64/ucrt64/bin/g++.exe",
             "args": [
                 "-std=c++23",
                 "-fdiagnostics-color=always",
                 "-g",
                 "src/*.cpp",
                 "src/lib/*.cpp",
-                "-o",
-                "${workspaceFolder}/main",
                 "-I",
-                "include"
+                "include",
+                "-o",
+                "${workspaceFolder}\\main.exe"
             ],
             "options": {
                 "cwd": "${workspaceFolder}/${input:labFolder}"
